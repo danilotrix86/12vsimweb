@@ -36,10 +36,10 @@ export function Hero() {
               100% free · No ads · No account · No registration
             </p>
             <h1 className="text-4xl font-bold tracking-tight text-slate-50 sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
-              Design your 12V system before you cut a wire
+              Design your 12/24V system before you cut a wire
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
-              Free browser-based simulator for vans, boats, campers, and off-grid installs.
+              Free browser-based simulator for 12V and 24V vans, boats, campers, and off-grid installs.
               No subscription, no sign-up — open the app and start wiring. Run live DC analysis,
               catch blown fuses and voltage drop, and share your schematic in one click.
             </p>
