@@ -9,7 +9,7 @@ function HeroScreenshot() {
           <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
           <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
         </div>
-        <span className="ml-2 text-xs text-slate-500">12V Sim — Live schematic</span>
+        <span className="ml-2 text-xs text-slate-400">12V Sim — Live schematic</span>
       </div>
       <img
         src="/hero-screenshot.png"

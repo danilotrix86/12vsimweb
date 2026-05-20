@@ -12,7 +12,7 @@ export function StatsStrip() {
         {stats.map((s) => (
           <div key={s.label} className="px-4 py-8 text-center sm:px-6">
             <div className="text-2xl font-bold text-energized sm:text-3xl">{s.value}</div>
-            <div className="mt-1 text-sm text-slate-500">{s.label}</div>
+            <div className="mt-1 text-sm text-slate-400">{s.label}</div>
           </div>
         ))}
       </div>

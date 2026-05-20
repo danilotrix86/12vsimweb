@@ -39,7 +39,7 @@ function ReviewPanel() {
           <div className="text-sm font-semibold text-slate-100">Design Review</div>
           <div className="text-[11px] text-slate-400">Grade A · 1 suggestions</div>
         </div>
-        <div className="flex h-7 w-7 items-center justify-center rounded-md text-slate-500" aria-hidden>
+        <div className="flex h-7 w-7 items-center justify-center rounded-md text-slate-400" aria-hidden>
           ×
         </div>
       </div>
@@ -50,7 +50,7 @@ function ReviewPanel() {
           const hasIssues = (cat.issues ?? 0) > 0;
           return (
             <div key={cat.label} className="flex items-center gap-2 px-3 py-2">
-              <span className="w-4 text-center text-xs text-slate-500">{hasIssues ? "▶" : " "}</span>
+              <span className="w-4 text-center text-xs text-slate-400">{hasIssues ? "▶" : " "}</span>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
                   <span className="text-[12px] font-medium text-slate-200">{cat.label}</span>
@@ -71,7 +71,7 @@ function ReviewPanel() {
         })}
       </div>
 
-      <div className="border-t border-slate-800 px-3 py-1.5 text-[10px] text-slate-500">
+      <div className="border-t border-slate-800 px-3 py-1.5 text-[10px] text-slate-400">
         Score updates live as you wire. Click any item to locate it on the canvas.
       </div>
     </div>

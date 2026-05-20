@@ -40,7 +40,7 @@ export function CalculatorsSection() {
             </article>
           ))}
         </div>
-        <p className="mt-8 text-sm text-slate-500">
+        <p className="mt-8 text-sm text-slate-400">
           <a href={APP_URL} className="font-medium text-energized hover:text-amber-300" target="_blank" rel="noopener noreferrer">
             Open the free simulator
           </a>

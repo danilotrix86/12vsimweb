@@ -22,7 +22,7 @@ export function FaqSection() {
             </div>
           ))}
         </dl>
-        <p className="mt-8 text-center text-sm text-slate-500">
+        <p className="mt-8 text-center text-sm text-slate-400">
           Ready to try it?{" "}
           <a href={APP_URL} className="font-medium text-energized hover:text-amber-300" target="_blank" rel="noopener noreferrer">
             Launch the free simulator
