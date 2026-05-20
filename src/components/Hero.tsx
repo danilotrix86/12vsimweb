@@ -12,7 +12,7 @@ function HeroScreenshot() {
         <span className="ml-2 text-xs text-slate-400">12V Sim — Live schematic</span>
       </div>
       <img
-        src="/hero-screenshot.png"
+        src="/og-image.png"
         alt="12V Sim wiring simulator showing dual AGM batteries, a battery selector set to BOTH, solar charge input, fuse, and an 8-channel switch panel with live voltage and current readings on every wire"
         width={1200}
         height={750}

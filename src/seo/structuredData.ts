@@ -9,9 +9,12 @@ import {
   APP_WEBPAGE_ID,
   BRAND_NAME,
   BROWSER_REQUIREMENTS,
+  DATE_MODIFIED,
   DATE_PUBLISHED,
   LOGO_URL,
+  OG_IMAGE_HEIGHT,
   OG_IMAGE_URL,
+  OG_IMAGE_WIDTH,
   ORG_ID,
   SITE_DESCRIPTION,
   SITE_ORIGIN,
@@ -45,12 +48,11 @@ function freeOffer(): JsonLd {
   };
 }
 
-function applicationNode(): JsonLd {
-  return {
+function applicationNode(options: { forMarketingPage: boolean }): JsonLd {
+  const base: JsonLd = {
     "@type": ["WebApplication", "SoftwareApplication"],
     "@id": APP_ID,
     name: BRAND_NAME,
-    url: APP_ORIGIN,
     applicationCategory: "DesignApplication",
     applicationSubCategory: "EngineeringApplication",
     operatingSystem: "Web browser",
@@ -60,10 +62,27 @@ function applicationNode(): JsonLd {
     inLanguage: "en",
     softwareVersion: SOFTWARE_VERSION,
     datePublished: DATE_PUBLISHED,
+    dateModified: DATE_MODIFIED,
     offers: freeOffer(),
     featureList: APP_FEATURE_LIST,
+    image: OG_IMAGE_URL,
     screenshot: OG_IMAGE_URL,
     publisher: { "@id": ORG_ID },
+  };
+
+  if (options.forMarketingPage) {
+    return {
+      ...base,
+      url: SITE_ORIGIN,
+      installUrl: APP_ORIGIN,
+      mainEntityOfPage: { "@id": WEBPAGE_ID },
+    };
+  }
+
+  return {
+    ...base,
+    url: APP_ORIGIN,
+    mainEntityOfPage: { "@id": APP_WEBPAGE_ID },
   };
 }
 
@@ -126,8 +145,8 @@ function primaryImage(): JsonLd {
     name: `${BRAND_NAME} — 12V DC wiring simulator preview`,
     description:
       "12V Sim wiring simulator with dual batteries, battery selector, and switch panel",
-    width: 1200,
-    height: 750,
+    width: OG_IMAGE_WIDTH,
+    height: OG_IMAGE_HEIGHT,
   };
 }
 
@@ -157,7 +176,7 @@ export function buildMarketingGraph(): JsonLd {
         primaryImageOfPage: { "@id": `${SITE_ORIGIN}/#og-image` },
         inLanguage: "en",
       },
-      applicationNode(),
+      applicationNode({ forMarketingPage: true }),
       primaryImage(),
       faqPage(),
       howTo(),
@@ -183,7 +202,7 @@ export function buildAppGraph(): JsonLd {
         about: { "@id": APP_ID },
         inLanguage: "en",
       },
-      applicationNode(),
+      applicationNode({ forMarketingPage: false }),
       primaryImage(),
     ],
   };

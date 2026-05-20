@@ -13,11 +13,14 @@ export const WEBPAGE_ID = `${SITE_ORIGIN}/#webpage`;
 export const APP_ID = `${APP_ORIGIN}/#application`;
 export const APP_WEBPAGE_ID = `${APP_ORIGIN}/#webpage`;
 
-export const OG_IMAGE_URL = `${SITE_ORIGIN}/og-image.svg`;
+export const OG_IMAGE_URL = `${SITE_ORIGIN}/og-image.png`;
+export const OG_IMAGE_WIDTH = 1200;
+export const OG_IMAGE_HEIGHT = 630;
 export const LOGO_URL = `${SITE_ORIGIN}/favicon.svg`;
 
 export const SOFTWARE_VERSION = "1.0";
 export const DATE_PUBLISHED = "2025-05-01";
+export const DATE_MODIFIED = "2026-05-20";
 
 export const SITE_DESCRIPTION =
   "Free online 12V DC circuit simulator with wire gauge calculator, voltage drop analysis, and wiring diagrams for boat, RV, camper van, off-grid solar, and automotive 12V. No ads, no account, no registration.";
