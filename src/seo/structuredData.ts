@@ -18,7 +18,7 @@ import {
   SOFTWARE_VERSION,
   WEBPAGE_ID,
   WEBSITE_ID,
-} from "../content/siteMeta";
+} from "./siteConstants";
 import { useCases, useCasesHeading } from "../content/useCases";
 
 type JsonLd = Record<string, unknown>;
