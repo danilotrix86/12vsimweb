@@ -26,7 +26,7 @@ function HeroScreenshot() {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-14">
+    <section className="relative overflow-hidden pt-16">
       <div className="dot-grid absolute inset-0 opacity-40" aria-hidden />
       <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:py-28">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
