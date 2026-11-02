@@ -11,6 +11,7 @@ import { UseCases } from "./components/UseCases";
 import { SystemsSection } from "./components/SystemsSection";
 import { SimulatorSection } from "./components/SimulatorSection";
 import { FaqSection } from "./components/FaqSection";
+import { AboutSection } from "./components/AboutSection";
 import { CtaBanner } from "./components/CtaBanner";
 import { Footer } from "./components/Footer";
 
@@ -31,6 +32,7 @@ export default function App() {
         <SystemsSection />
         <SimulatorSection />
         <FaqSection />
+        <AboutSection />
         <CtaBanner />
       </main>
       <Footer />

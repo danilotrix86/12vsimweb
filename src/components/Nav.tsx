@@ -12,7 +12,7 @@ function trackDonateClick(): void {
   });
 }
 
-function DonateButton({ compact = false }: { compact?: boolean }) {
+export function DonateButton({ compact = false, prominent = false }: { compact?: boolean; prominent?: boolean }) {
   return (
     <a
       href={KOFI_URL}
@@ -20,7 +20,11 @@ function DonateButton({ compact = false }: { compact?: boolean }) {
       rel="noopener noreferrer"
       onClick={trackDonateClick}
       title="12V Sim stays free. This helps cover hosting, the database, and new features."
-      className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-rose-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-rose-500"
+      className={
+        prominent
+          ? "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-rose-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-rose-500"
+          : "inline-flex items-center gap-1.5 whitespace-nowrap rounded-lg bg-rose-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-rose-500"
+      }
     >
       <svg
         viewBox="0 0 24 24"
@@ -30,7 +34,7 @@ function DonateButton({ compact = false }: { compact?: boolean }) {
         strokeLinecap="round"
         strokeLinejoin="round"
         aria-hidden
-        className="h-3.5 w-3.5"
+        className={prominent ? "h-4 w-4" : "h-3.5 w-3.5"}
       >
         <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
         <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
@@ -64,6 +68,7 @@ export function Nav() {
           <a href="#diagrams" className="transition hover:text-slate-100">Diagrams</a>
           <a href="#simulator" className="transition hover:text-slate-100">Simulator</a>
           <a href="#faq" className="transition hover:text-slate-100">FAQ</a>
+          <a href="#about" className="transition hover:text-slate-100">About</a>
           <DonateButton />
         </nav>
 
